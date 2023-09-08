@@ -19,7 +19,19 @@
                     Content="Generate"
                     Margin="3"
                     Click="btGenerat_Click"/>
+
+            <Label Name="LCore"
+                   Margin="3"/>
             
+            <Label Name="LSuffix"
+                    Margin="3"/>
+            
+            <Label Name="LPreffix"
+                    Margin="3"/>
+            
+            <Label Name="LEndffix"
+                    Margin="3"/>
+
         </StackPanel>
     </Grid>
 </Window>

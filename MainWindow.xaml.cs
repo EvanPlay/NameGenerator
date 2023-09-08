@@ -30,15 +30,18 @@ namespace NameGenerator
         private void btGenerat_Click(object sender, RoutedEventArgs e)
         {
             VatersMethode();
+
+            
+
             //NameResult();
         }
         //Метод генерации
-        public void NameResult()
-        {
+        //public void NameResult()
+        //{
 
-            //tbResult.Text = "Timur";
+        //    tbResult.Text = "Timur";
 
-        }
+        //}
         public void VatersMethode()
         {
             //Генерация последовательности построения
@@ -50,15 +53,27 @@ namespace NameGenerator
             int preffix = random.Next(0,4);
             int endffix = random.Next(0,4);
 
-            string VatersResult = 
-                core.ToString() +
-                suffix.ToString() +
-                preffix.ToString() +
-                endffix.ToString();
+            string c = core.ToString();
+            string s = suffix.ToString();
+            string p = preffix.ToString();
+            string end = endffix.ToString();
+
+            LCore.Content = c;
+            LSuffix.Content = c+s;
+            LPreffix.Content = p+c+s;
+            LEndffix.Content = p+c+s+end;
+
+            //string VatersResult =
+            //    core.ToString() +
+            //    suffix.ToString() +
+            //    preffix.ToString() +
+            //    endffix.ToString();
 
             //Приём сгененерированных результатов
 
-            tbResult.Text = VatersResult;
+            //tbResult.Text = VatersResult;
+
+            tbResult.Text = p+c+s+end;
 
         }
     }
