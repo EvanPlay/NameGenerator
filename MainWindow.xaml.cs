@@ -24,16 +24,42 @@ namespace NameGenerator
         public MainWindow()
         {
             InitializeComponent();
+            VatersMethode();
         }
-
+        //Приём комманды о начале работы
         private void btGenerat_Click(object sender, RoutedEventArgs e)
         {
-            NameResult();
+            VatersMethode();
+            //NameResult();
         }
         //Метод генерации
         public void NameResult()
         {
-            tbResult.Text = "Timur";
+
+            //tbResult.Text = "Timur";
+
+        }
+        public void VatersMethode()
+        {
+            //Генерация последовательности построения
+
+            Random random = new Random();
+
+            int core = random.Next(0, 10);
+            int suffix = random.Next(0, 4);
+            int preffix = random.Next(0,4);
+            int endffix = random.Next(0,4);
+
+            string VatersResult = 
+                core.ToString() +
+                suffix.ToString() +
+                preffix.ToString() +
+                endffix.ToString();
+
+            //Приём сгененерированных результатов
+
+            tbResult.Text = VatersResult;
+
         }
     }
 }
